@@ -55,6 +55,17 @@ public class Frame4 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("*Metros Cuadrados (m^2):");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 51, 190, 33));
+
+        txtmetros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmetrosActionPerformed(evt);
+            }
+        });
+        txtmetros.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtmetrosKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtmetros, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 60, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -209,6 +220,20 @@ public class Frame4 extends javax.swing.JFrame {
         
         txtmetros.requestFocusInWindow();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtmetrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmetrosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmetrosActionPerformed
+
+    private void txtmetrosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmetrosKeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) 
+          { 
+              getToolkit().beep(); 
+              evt.consume();      
+          }
+    }//GEN-LAST:event_txtmetrosKeyTyped
 
     /**
      * @param args the command line arguments
